@@ -1,0 +1,40 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<header class="topbar">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+</header>
+
+<style is:global>
+    .topbar {
+        padding-left: 0px;
+        background-color: #343434;
+    }
+
+    .topbar ul li {
+        display: inline-block;
+        padding: 10px 20px;
+    }
+
+    .topbar ul li:hover {
+        background-color: black;
+    }
+    .topbar ul li a {
+        text-decoration: none;
+    }
+    a {
+        color: #7BC4FD;
+    }
+
+    a:hover {
+        color: #6BA6FD;
+    }
+</style>
